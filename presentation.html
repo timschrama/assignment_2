@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Tim Schrama">
-  <title>Assignment Lewis</title>
+  <title>Master thesis</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="reveal.js/css/theme/moon.css" id="theme">
+  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
@@ -29,75 +29,107 @@
     <div class="slides">
 
 <section>
-  <h1 class="title">Assignment Lewis</h1>
+  <h1 class="title">Master thesis</h1>
   <h2 class="author">Tim Schrama</h2>
   <h3 class="date">TiSEM, Tilburg University</h3>
 </section>
 <section id="TOC">
 <ul>
-<li><a href="#/introduction">Introduction</a><ul>
-<li><a href="#/first-steps">First steps</a></li>
-<li><a href="#/formulas">Formulas</a></li>
-</ul></li>
-<li><a href="#/final-results">Final results</a><ul>
-<li><a href="#/growth-of-economy">Growth of economy</a></li>
-<li><a href="#/figure-1">Figure 1</a></li>
-<li><a href="#/figure-2">Figure 2</a></li>
-</ul></li>
-<li><a href="#/conclusion">Conclusion</a><ul>
-<li><a href="#/conclusion-1">Conclusion</a></li>
-</ul></li>
+<li><a href="#/introduction">Introduction</a></li>
+<li><a href="#/game">Game</a></li>
+<li><a href="#/method">Method</a></li>
+<li><a href="#/experiment">Experiment</a></li>
+<li><a href="#/general-results">General results</a></li>
+<li><a href="#/hypothesis-testing">Hypothesis testing</a></li>
+<li><a href="#/conclusion">Conclusion</a></li>
 </ul>
 </section>
 
-<section><section id="introduction" class="titleslide slide level1"><h1>Introduction</h1></section><section id="first-steps" class="slide level2">
-<h1>First steps</h1>
-<p>Preparation: derivation of the Lewis model. Before we turn to the main questions of the assignment, we first build up the Lewis model. We will derive the most important equations for reference later on. Start by writing down the seven formulas that form blueprint of the Lewis design:</p>
-</section><section id="formulas" class="slide level2">
-<h1>Formulas</h1>
-\begin{align}
-Y_S=A_S L_S \\
-w_S=A_S\\
-Y_M=A_M K^\alpha L_M ^{1-\alpha}\\
-w_M=[1-\alpha]\frac{Y_M}{L_M}\\
-L=L_M+L_S\\
-w_M=\phi w_S\\
-\dot{K}= s_\pi [Y_M-w_M L_M ]-\delta K
-\end{align}
+<section><section id="introduction" class="titleslide slide level1"><h1>Introduction</h1></section><section id="why" class="slide level2">
+<h1>Why?</h1>
+<ul>
+<li><p>Environment</p></li>
+<li><p>Gerlagh and Van der Heijden (2015)</p></li>
+<li><p>five-player game and different incentives</p></li>
+</ul>
 </section></section>
-<section><section id="final-results" class="titleslide slide level1"><h1>Final results</h1></section><section id="growth-of-economy" class="slide level2">
-<h1>Growth of economy</h1>
-\begin{align}
-\dot{Y}=\dot{K} A_S (\frac{\phi}{1-\alpha}-1)\frac{(1-\alpha) A_M}{\phi A_S}^{\frac{1}{\alpha}} \nonumber \\
-\rightarrow \hat{Y} =\frac{\dot{K} A_S (\frac{\phi}{1-\alpha}-1)\frac{(1-\alpha)A_M}{\phi A_S}^{\frac{1}{\alpha}}}{Y} \nonumber \\
-\rightarrow \hat{Y} =\dot{K} A_S \frac{(\frac{\phi}{1-\alpha}-1)(\frac{1-\alpha}{\phi} \frac{A_M}{A_S} )^{\frac{1}{\alpha}}}{A_S L+K A_S (\frac{\phi}{1-\alpha}-1)(\frac{1-\alpha}{\phi} \frac{A_M}{A_S} )^{\frac{1}{\alpha}}} \nonumber \\
-\end{align}
-</section><section class="slide level2">
-
-\begin{align}
-\rightarrow \hat{Y} =\hat{K} A_S \frac{(\frac{\phi}{1-\alpha}-1)(\frac{(1-\alpha)}{\phi}  \frac{A_M}{A_S} )^{\frac{1}{\alpha}}}{\frac{A_S L}{K}+A_S (\frac{\phi}{1-\alpha}-1)(\frac{(1-\alpha)}{\phi}  \frac{A_M}{A_S})^{\frac{1}{\alpha}}} \nonumber \\
-\rightarrow \hat{Y} =\hat{K} A_S \frac{(\frac{\phi}{1-\alpha}-1)(\frac{1-\alpha}{\phi}  \frac{A_M}{A_S}) ^{\frac{1}{\alpha}}+\frac{A_S L}{K}-\frac{A_S L}{K}}{\frac{A_S L}{K}+A_S (\frac{\phi}{1-\alpha}-1)(\frac{1-\alpha}{\phi}  \frac{A_M}{A_S})^{\frac{1}{\alpha}}} \nonumber \\
-\rightarrow \hat{Y} =\hat{K} (1-\frac{A_S L}{A_S L+K A_S (\frac{\phi}{1-\alpha}-1)(\frac{1-\alpha}{\phi}  \frac{A_M}{A_S})^{\frac{1}{\alpha}}} \nonumber \\
-= \hat{K} [1- A_S \frac{L}{Y}]
-\end{align}
-<p>Over time <span class="math inline">\(A_S\)</span> <span class="math inline">\(L/Y\)</span> becomes smaller, leading to an increasing growth rate of income.</p>
-</section><section id="figure-1" class="slide level2">
-<h1>Figure 1</h1>
+<section><section id="game" class="titleslide slide level1"><h1>Game</h1></section><section id="general-information" class="slide level2">
+<h1>General information</h1>
+<ul>
+<li><p>Seven round, five games</p></li>
+<li><p>Blue and purple chips</p></li>
+<li><p>Different payoff schemes</p></li>
+</ul>
+</section><section id="rules" class="slide level2">
+<h1>Rules</h1>
+<ol type="1">
+<li><p>Changing 1 chip per round</p></li>
+<li><p>No negative numbers allowed</p></li>
+<li><p>No communication</p></li>
+</ol>
+</section></section>
+<section><section id="method" class="titleslide slide level1"><h1>Method</h1></section><section id="outcomes" class="slide level2">
+<h1>Outcomes</h1>
+<ul>
+<li><p>Nash Equilibrium</p></li>
+<li><p>Mixed Strategy Equilibrium</p></li>
+</ul>
+</section><section id="infinite-horizon" class="slide level2">
+<h1>Infinite horizon</h1>
+\begin{equation}
+\pi_i ({b}(t)) = E[v_i(b(t+1)) - \bar{v} + \pi_i(b(t)+1)|b(t)] 
+\end{equation}
+</section></section>
+<section><section id="experiment" class="titleslide slide level1"><h1>Experiment</h1></section><section id="design" class="slide level2">
+<h1>Design</h1>
+<ul>
+<li><p>Treatments</p></li>
+<li><p>Participants</p></li>
+</ul>
+</section></section>
+<section><section id="general-results" class="titleslide slide level1"><h1>General results</h1></section><section id="blues-and-profits" class="slide level2">
+<h1>Blues and Profits</h1>
 <figure>
-<img src="graph1.png" alt="Graph 1" /><figcaption>Graph 1</figcaption>
+<img src="graph1.png" />
 </figure>
-</section><section id="figure-2" class="slide level2">
-<h1>Figure 2</h1>
+</section><section id="transitions" class="slide level2">
+<h1>Transitions</h1>
 <figure>
-<img src="graph2.png" alt="Graph 2" /><figcaption>Graph 2</figcaption>
+<img src="graph2.png" />
 </figure>
+</section></section>
+<section><section id="hypothesis-testing" class="titleslide slide level1"><h1>Hypothesis testing</h1></section><section id="hypothesis-1" class="slide level2">
+<h1>Hypothesis 1</h1>
+<p><img src="graph4.png" /> A. There will be more participants switching to blue in the first round of the first game in the high treatment.</p>
+<p><img src="graph4.png" /> B. There will be more transitions in the high treatment.</p>
+<p><img src="graph4.png" /> C. the payoffs will be higher in the high treatment.</p>
+<p><img src="graph5.png" /> D. The individual payoffs of a participant relative to the maximum payoff will be the same in both treatments.</p>
+</section><section id="hypothesis-2" class="slide level2">
+<h1>Hypothesis 2</h1>
+<p><img src="graph4.png" /> A. The number of participants switching to blue in the first round of a game is equal to the expected alpha in the infinite horizon for both treatments.</p>
+<p><img src="graph4.png" /> B. The average number of transitions is equal to the expected transitions in the infinite horizon game in both treatments.</p>
+<p><img src="graph4.png" /> C. The individual payoff of a participant in each treatment is equal to the expected payoff in the infinite horizon game.</p>
+</section><section id="hypothesis-3" class="slide level2">
+<h1>Hypothesis 3</h1>
+<p><img src="graph3.png" /> A. The individual payoff of a participant in the low treatment is equal to the payoff of a participant in the three-player game.</p>
+<p><img src="graph3.png" /> B. The level of cooperation in the first round of the first game in the high treatment is comparable to the level of cooperation in the three-player game.</p>
+</section><section id="hypothesis-4" class="slide level2">
+<h1>Hypothesis 4</h1>
+<p><img src="graph3.png" /> A. The score of the cognitive thinking test is uncorrelated with the willingness to cooperate in the first round of the first game.</p>
+<p><img src="graph3.png" /> B. The level of education and school are uncorrelated with the willingness to cooperate in the first round of the first game.</p>
 </section></section>
 <section><section id="conclusion" class="titleslide slide level1"><h1>Conclusion</h1></section><section id="conclusion-1" class="slide level2">
 <h1>Conclusion</h1>
 <ul>
-<li>I have learned how to use formulas in fancy presentations</li>
-<li>The same holds for figures</li>
-<li>I could make this presentation longer with copy pasting, but that seems useless</li>
+<li><p>Both treatments could be used as baseline</p></li>
+<li><p>Treatments were unbalanced</p></li>
+<li><p>More transitions with low bonus</p></li>
+</ul>
+</section><section id="recommendations" class="slide level2">
+<h1>Recommendations</h1>
+<ul>
+<li><p>Look at effects when treatments are balanced</p></li>
+<li><p>Look at effects of framing</p></li>
 </ul>
 </section></section>
     </div>
@@ -107,11 +139,9 @@ w_M=\phi w_S\\
   <script src="reveal.js/js/reveal.js"></script>
 
   <script>
-
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
